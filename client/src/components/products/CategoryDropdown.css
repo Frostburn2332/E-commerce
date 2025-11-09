@@ -1,0 +1,98 @@
+.category-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.category-button {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 180px;
+  justify-content: space-between;
+  transition: border-color 0.2s;
+}
+
+.category-button:hover {
+  border-color: #999;
+}
+
+.dropdown-arrow {
+  transition: transform 0.2s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.category-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-item {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.category-item:hover {
+  background-color: #f5f5f5;
+}
+
+.category-item.selected {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+/* Scrollbar styling */
+.category-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.category-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.category-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.category-list::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

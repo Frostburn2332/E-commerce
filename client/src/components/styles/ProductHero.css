@@ -1,0 +1,150 @@
+.product-hero {
+  background: linear-gradient(135deg, #4A90E2 0%, #1976D2 100%);
+  color: white;
+  padding: 6rem 2rem 8rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;  /* Equal border radius on all corners */
+  margin: 2rem auto 3rem;  /* Equal margin top and bottom, auto for centering */
+  box-shadow: 0 10px 30px rgba(25, 118, 210, 0.3);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;  /* Take up 90% of container width */
+  max-width: 1400px;  /* Maximum width to maintain proportions */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.bounce-letter {
+  display: inline-block;
+  color: white;
+  animation: letterBounce 1s ease-out infinite alternate;
+}
+
+@keyframes letterBounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.shop-now-btn {
+  background-color: white;
+  color: #1976D2;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.shop-now-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #e3f2fd;
+}
+
+.toy-shelf {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem 0;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+}
+
+.toy-emoji {
+  font-size: 3rem;
+  animation: toyBounce 1.5s ease-in-out infinite alternate;
+  display: inline-block;
+}
+
+@keyframes toyBounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+.wave-effect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .product-hero {
+    width: 95%;  /* Slightly wider on mobile */
+    padding: 4rem 1rem 6rem;
+    min-height: 500px;
+    margin: 1rem auto 2rem;  /* Smaller margins on mobile */
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .toy-shelf {
+    gap: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .toy-emoji {
+    font-size: 2.5rem;
+  }
+}
