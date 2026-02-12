@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const Product = require('./models/Product');
 const products = require('./data/products');
 const connectDB = require('./config/db');
+
+// Load environment variables so connectDB sees MONGODB_URI
+dotenv.config();
 
 connectDB();
 
