@@ -1,4 +1,4 @@
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
+const API_URL = 'https://e-commerce-dp7t.onrender.com/api';
 
 export default API_URL;
 
