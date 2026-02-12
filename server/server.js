@@ -16,8 +16,12 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
-  credentials: true
+  origin: [
+    'https://aditya-goudar-practice.vercel.app', // No trailing slash
+    'http://localhost:3000'
+  ],
+  credentials: true,
+  optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
 app.use(cors(corsOptions));
 app.use(express.json());
